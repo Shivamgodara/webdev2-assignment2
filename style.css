@@ -1,0 +1,147 @@
+/* ====== BODY / BACKGROUND ====== */
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+    background: linear-gradient(135deg, #020b2d, #0b1445);
+    color: white;
+}
+
+/* ====== MAIN LAYOUT ====== */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+/* ====== WHITE BOXES (Search + Weather) ====== */
+.box {
+    background: white;
+    color: black;
+    padding: 18px;              /* height kam */
+    width: 480px;               /* width bada */
+    border-radius: 14px;
+}
+
+/* ====== INPUT & BUTTON ====== */
+input {
+    padding: 10px;
+    width: 75%;
+    font-size: 15px;
+}
+
+button {
+    padding: 10px 16px;
+    font-size: 15px;
+    background: orange;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ====== SEARCH HISTORY BUTTONS ====== */
+#history {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.history-btn {
+    background: orange;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 18px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* ====== WEATHER INFO ROWS ====== */
+.weather-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px 8px 20px;   /* compact height */
+    margin: 6px 0;
+    background: #f5f5f5;
+    border-radius: 8px;
+    position: relative;
+}
+
+/* ORANGE LINE — SIRF WEATHER ROWS */
+.weather-row::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    height: calc(100% - 12px);
+    width: 5px;
+    background: orange;
+    border-radius: 5px;
+}
+
+.label {
+    font-weight: 500;
+    color: #333;
+}
+
+.value {
+    font-weight: 600;
+    color: #000;
+}
+
+/* ====== CONSOLE WHITE BOX ====== */
+.console {
+    background: white;
+    color: black;
+    margin: 25px auto;
+    width: 980px;
+    padding: 16px;              /* height kam */
+    border-radius: 14px;
+    position: relative;
+}
+
+/* ORANGE LINE — SIRF CONSOLE BOX */
+
+
+.console h3 {
+    margin-top: 0;
+    padding-left: 12px;
+}
+
+
+/* ====== CONSOLE INNER AREA ====== */
+pre {
+    background: #020b2d;        /* dark blue */
+    padding: 12px 12px 12px 22px;
+    border-radius: 10px;
+    color: #00ffcc;             /* wahi purana neon blue */
+    font-size: 14px;
+    position: relative;
+    text-align: left;
+}
+
+/* ✅ ORANGE LINE — EXACT IMAGE JAISE */
+pre::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    height: calc(100% - 16px);
+    width: 5px;
+    background: orange;
+    border-radius: 5px;
+}
+
+/* ====== ERROR TEXT ====== */
+.error-text {
+    color: red;
+    font-weight: 600;
+}
+
+/* ====== SAFETY LOCK (background pe kabhi orange line nahi) ====== */
+body::before,
+.container::before {
+    content: none !important;
+}

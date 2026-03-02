@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Async Weather Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🌤️ Async Weather Tracker</h1>
+
+<div class="container">
+
+    <!-- 🔍 Search Box -->
+    <div class="box">
+        <h3>Search City</h3>
+        <input type="text" id="cityInput" placeholder="Enter city">
+        <button onclick="getWeather()">Search</button>
+
+        <h4>Search History</h4>
+        <div id="history"></div>
+    </div>
+
+    <!-- 🌦️ Weather Info -->
+    <div class="box weather-box">
+        <h3>Weather Info</h3>
+
+        <!-- ❌ Error message (hidden by default) -->
+        <div id="errorMsg" class="error-text" style="display:none;">
+            City not found
+        </div>
+
+        <!-- ✅ Weather data (hidden on error) -->
+        <div id="weatherContent">
+            <div class="weather-row">
+                <span class="label">City</span>
+                <span id="city" class="value">-</span>
+            </div>
+
+            <div class="weather-row">
+                <span class="label">Temp</span>
+                <span id="temp" class="value">-</span>
+            </div>
+
+            <div class="weather-row">
+                <span class="label">Weather</span>
+                <span id="weather" class="value">-</span>
+            </div>
+
+            <div class="weather-row">
+                <span class="label">Humidity</span>
+                <span id="humidity" class="value">-</span>
+            </div>
+
+            <div class="weather-row">
+                <span class="label">Wind</span>
+                <span id="wind" class="value">-</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- 🖥️ Console -->
+<div class="console">
+    <h3>Console – Event Loop</h3>
+    <pre id="log"></pre>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
